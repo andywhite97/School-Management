@@ -40,8 +40,8 @@ export class AppComponent {
   onActivate() {
     var user = localStorage.getItem('user')
 
-  if (user) {
-    this.authed = true
-  }
+    if (user) {
+      this.authed = true
+    }
   }
 }
