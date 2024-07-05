@@ -8,7 +8,7 @@ import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 export class AppComponent {
 
   title = 'School Management';
-  authed: boolean = true
+  authed: boolean = false
 
   constructor(
     router: Router
@@ -19,6 +19,7 @@ export class AppComponent {
       }
     })
   }
+
 
   authenticated() {
     var role = localStorage.getItem('role')
@@ -37,6 +38,10 @@ export class AppComponent {
   }
 
   onActivate() {
+    var user = localStorage.getItem('user')
 
+  if (user) {
+    this.authed = true
+  }
   }
 }
