@@ -1,1 +1,52 @@
-<p>login works!</p>
+<div class="row min-vh-100 bg-100">
+    <div class="col-6 d-none d-lg-block position-relative">
+        <div class="bg-holder" style="background-image:url(../../../assets/img/generic/14.jpg);background-position: 50% 20%;"></div>
+        <!--/.bg-holder-->
+    </div>
+    <div class="col-sm-10 col-md-6 px-sm-0 align-self-center mx-auto py-5">
+        <div class="row justify-content-center g-0">
+            <div class="col-lg-9 col-xl-8 col-xxl-6">
+                <div class="card">
+                    <div class="card-header bg-circle-shape bg-shape text-center p-2">
+                        <a class="font-sans-serif fw-bolder fs-5 z-1 position-relative link-light" [routerLink]="['']" data-bs-theme="light">School Management</a></div>
+                    <div class="card-body p-4">
+                        <div class="row flex-between-center">
+                            <div class="col-auto">
+                                <h3>Login</h3>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="split-login-email">Email address</label>
+                            <input #emailModel="ngModel" [(ngModel)]="email" class="form-control" id="login-email" type="email" required email>
+                            <div class="form-text" *ngIf="emailModel.touched && emailModel.invalid">
+                                Cannot leave field empty.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <label class="form-label" for="split-login-password">Password</label>
+                            </div>
+                            <input class="form-control" #passwordModel="ngModel" [(ngModel)]="password" id="login-password" type="password" required>
+                            <div class="form-text" *ngIf="passwordModel.touched && passwordModel.invalid">
+                                Cannot leave field empty.
+                            </div>
+                        </div>
+                        <div class="row flex-between-center">
+                            <div class="col-auto">
+                                <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="split-checkbox"><label class="form-check-label mb-0" for="split-checkbox">Remember me</label></div>
+                            </div>
+                            <div class="col-auto"><a class="fs-10" [routerLink]="['/auth/forgot_pass']">Forgot Password?</a></div>
+                        </div>
+                        <div class="mb-3">
+                            <button *ngIf="submitted" class="btn btn-primary d-block w-100 mt-3" type="button" disabled="">
+                              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                              Logging In
+                            </button>
+                            <button *ngIf="!submitted" (click)="login()" class="btn btn-primary d-block w-100 mt-3" [disabled]="emailModel.invalid || passwordModel.invalid" type="submit" name="submit">Log in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

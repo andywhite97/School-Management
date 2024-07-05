@@ -1,187 +1,234 @@
-<nav class="navbar navbar-vertical navbar-expand-lg">
-    <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
-        <!-- scrollbar removed-->
-        <div class="navbar-vertical-content">
-            <ul class="navbar-nav flex-column" id="navbarVerticalNav">
-                <li class="nav-item">
-                    <!-- parent pages-->
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link dropdown-indicator label-1" href="#nv-home" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="nv-home">
-                            <div class="d-flex align-items-center">
-                                <div class="dropdown-indicator-icon"><svg class="svg-inline--fa fa-caret-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"></path></svg>
-                                    <!-- <span class="fas fa-caret-right"></span> Font Awesome fontawesome.com --></div><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></span>
-                                <span class="nav-link-text">Home</span>
-                            </div>
+<div class="d-flex align-items-center">
+    <div class="toggle-icon-wrapper">
+        <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Toggle Navigation" data-bs-original-title="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+    </div>
+    <a class="navbar-brand" href="../index.html">
+        <div class="d-flex align-items-center py-3"><img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40"><span class="font-sans-serif text-primary">falcon</span></div>
+    </a>
+</div>
+<div class="navbar-collapse collapse" id="navbarVerticalCollapse" style="">
+    <div class="navbar-vertical-content scrollbar">
+        <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
+            <li class="nav-item">
+                <!-- parent pages-->
+                <a class="nav-link dropdown-indicator" href="#dashboard" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dashboard">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><svg class="svg-inline--fa fa-chart-pie fa-w-17" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chart-pie" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544 512" data-fa-i2svg=""><path fill="currentColor" d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"></path></svg><!-- <span class="fas fa-chart-pie"></span>                        Font Awesome fontawesome.com --></span><span class="nav-link-text ps-1">Dashboard</span></div>
+                </a>
+                <ul class="nav collapse show" id="dashboard">
+                    <li *ngIf="role=='principal'" class="nav-item">
+                        <a class="nav-link" [routerLink]="'dashboard/principal'" routerLinkActive="active">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Principal</span></div>
                         </a>
-                        <div class="parent-wrapper label-1">
-                            <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-home">
-                                <li class="collapsed-nav-item-title d-none">Home</li>
-                                <li class="nav-item">
-                                    <a class="nav-link" routerLink="dashboard/principal" routerLinkActive="active" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">Principal's Dashboard</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" routerLink="dashboard/teacher" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">Teacher's Dashboard</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" routerLink="dashboard/student" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">Student's Dashoboard</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <!-- label-->
-                    <p class="navbar-vertical-label">Apps</p>
-                    <hr class="navbar-vertical-line">
-                    <!-- parent pages-->
-
-                    <!-- parent pages-->
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link dropdown-indicator label-1" href="#nv-Staff" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="nv-Staff">
-                            <div class="d-flex align-items-center">
-                                <div class="dropdown-indicator-icon"><svg class="svg-inline--fa fa-caret-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"></path></svg>
-                                    <!-- <span class="fas fa-caret-right"></span> Font Awesome fontawesome.com --></div><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
-                                <span class="nav-link-text">Manage Staff</span><svg class="svg-inline--fa fa-circle text-info ms-1 new-page-indicator" style="font-size: 6px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"></path></svg>
-                                <!-- <span class="fa-solid fa-circle text-info ms-1 new-page-indicator" style="font-size: 6px"></span> Font Awesome fontawesome.com -->
-                            </div>
+                        <!-- more inner pages-->
+                    </li>
+                    <li *ngIf="role=='lecturer'" class="nav-item">
+                        <a class="nav-link" [routerLink]="'dashboard/teacher'" routerLinkActive="active">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Teacher</span></div>
                         </a>
-                        <div class="parent-wrapper label-1">
-                            <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-Staff">
-                                <li class="collapsed-nav-item-title d-none">Manage Staff</li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">Add New Staff</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">All Staff</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">Performance</span><span class="badge ms-2 badge badge-phoenix badge-phoenix-warning ">New</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- parent pages-->
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link dropdown-indicator label-1" href="#nv-project-management" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="nv-project-management">
-                            <div class="d-flex align-items-center">
-                                <div class="dropdown-indicator-icon"><svg class="svg-inline--fa fa-caret-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"></path></svg>
-                                    <!-- <span class="fas fa-caret-right"></span> Font Awesome fontawesome.com --></div><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></span>
-                                <span class="nav-link-text">Project management</span>
-                            </div>
+                        <!-- more inner pages-->
+                    </li>
+                    <li *ngIf="role=='student'" class="nav-item">
+                        <a class="nav-link" [routerLink]="'dashboard/student'" routerLinkActive="active">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Student</span></div>
                         </a>
-                        <div class="parent-wrapper label-1">
-                            <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-project-management">
-                                <li class="collapsed-nav-item-title d-none">Project management</li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../../apps/project-management/create-new-1.html" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">Create new</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../../apps/project-management/project-board-view-1.html" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">Project board</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- more inner pages-->
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <!-- label-->
+                <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                    <div class="col-auto navbar-vertical-label">App</div>
+                    <div class="col ps-0">
+                        <hr class="mb-0 navbar-vertical-divider">
                     </div>
-                    <!-- parent pages-->
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link dropdown-indicator label-1" href="#nv-students" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="nv-students">
-                            <div class="d-flex align-items-center">
-                                <div class="dropdown-indicator-icon"><svg class="svg-inline--fa fa-caret-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"></path></svg>
-                                    <!-- <span class="fas fa-caret-right"></span> Font Awesome fontawesome.com --></div><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></span>
-                                <span class="nav-link-text">Manage Students</span><span class="badge ms-2 badge badge-phoenix badge-phoenix-warning nav-link-badge">New</span>
-                            </div>
+                </div>
+                <!-- parent pages-->
+                <a class="nav-link" [routerLink]="'departments'" routerLinkActive="active" role="button">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-bezier-curve"></span></span><span class="nav-link-text ps-1">Departments</span></div>
+                </a>
+                <!-- parent pages-->
+                <a class="nav-link" [routerLink]="'classes'" routerLinkActive="active" role="button">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-briefcase"></span></span><span class="nav-link-text ps-1">Classes</span></div>
+                </a>
+                <!-- parent pages-->
+                <a class="nav-link" href="../app/calendar.html" role="button">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><svg class="svg-inline--fa fa-calendar-alt fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path></svg><!-- <span class="fas fa-calendar-alt"></span>                        Font Awesome fontawesome.com --></span><span class="nav-link-text ps-1">Calendar</span></div>
+                </a>
+                <!-- parent pages-->
+                <a class="nav-link dropdown-indicator" href="#announcw" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="announcw">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon">
+                    <svg class="svg-inline--fa fa-envelope-open fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope-open" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 464c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V200.724a48 48 0 0 1 18.387-37.776c24.913-19.529 45.501-35.365 164.2-121.511C199.412 29.17 232.797-.347 256 .003c23.198-.354 56.596 29.172 73.413 41.433 118.687 86.137 139.303 101.995 164.2 121.512A48 48 0 0 1 512 200.724V464zm-65.666-196.605c-2.563-3.728-7.7-4.595-11.339-1.907-22.845 16.873-55.462 40.705-105.582 77.079-16.825 12.266-50.21 41.781-73.413 41.43-23.211.344-56.559-29.143-73.413-41.43-50.114-36.37-82.734-60.204-105.582-77.079-3.639-2.688-8.776-1.821-11.339 1.907l-9.072 13.196a7.998 7.998 0 0 0 1.839 10.967c22.887 16.899 55.454 40.69 105.303 76.868 20.274 14.781 56.524 47.813 92.264 47.573 35.724.242 71.961-32.771 92.263-47.573 49.85-36.179 82.418-59.97 105.303-76.868a7.998 7.998 0 0 0 1.839-10.967l-9.071-13.196z"></path></svg><!-- <span class="fas fa-envelope-open"></span>Font
+                        Awesome fontawesome.com --></span><span class="nav-link-text ps-1">Announcements</span></div>
+                </a>
+                <ul class="nav collapse" id="announcw">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/email/inbox.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Create Announcement</span></div>
                         </a>
-                        <div class="parent-wrapper label-1">
-                            <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-students">
-                                <li class="collapsed-nav-item-title d-none">Manage Students</li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">Add New Student</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">View Students</span></div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">Performance</span></div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- parent pages-->
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link label-1" href="../../apps/chat-1.html" role="button" data-bs-toggle="" aria-expanded="false">
-                            <div class="d-flex align-items-center"><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span>
-                                <span class="nav-link-text-wrapper"><span class="nav-link-text">Announcements</span></span>
-                            </div>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/email/email-detail.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">View Announcement</span></div>
                         </a>
-                    </div>
-                    <!-- parent pages-->
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link dropdown-indicator label-1" href="#nv-events" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="nv-events">
-                            <div class="d-flex align-items-center">
-                                <div class="dropdown-indicator-icon"><svg class="svg-inline--fa fa-caret-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"></path></svg>
-                                    <!-- <span class="fas fa-caret-right"></span> Font Awesome fontawesome.com --></div><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></span>
-                                <span class="nav-link-text">Events</span>
-                            </div>
+                        <!-- more inner pages-->
+                    </li>
+                </ul>
+                <!-- parent pages-->
+                <a class="nav-link dropdown-indicator" href="#events" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="events">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><svg class="svg-inline--fa fa-calendar-day fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar-day" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path></svg><!-- <span class="fas fa-calendar-day"></span>                        Font Awesome fontawesome.com --></span><span class="nav-link-text ps-1">Events</span></div>
+                </a>
+                <ul class="nav collapse" id="events">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/events/create-an-event.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Create an event</span></div>
                         </a>
-                        <div class="parent-wrapper label-1">
-                            <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-events">
-                                <li class="collapsed-nav-item-title d-none">Events</li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../../apps/events/create-an-event-1.html" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">Create an event</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../../apps/events/event-detail-1.html" data-bs-toggle="" aria-expanded="false">
-                                        <div class="d-flex align-items-center"><span class="nav-link-text">View Events</span></div>
-                                    </a>
-                                    <!-- more inner pages-->
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- parent pages-->
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link label-1" href="../../apps/calendar-1.html" role="button" data-bs-toggle="" aria-expanded="false">
-                            <div class="d-flex align-items-center"><span class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
-                                <span class="nav-link-text-wrapper"><span class="nav-link-text">School Calendar</span></span>
-                            </div>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/events/event-detail.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Event detail</span></div>
                         </a>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/events/event-list.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Event list</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                </ul>
+                <!-- parent pages-->
+                <a class="nav-link dropdown-indicator" href="#teachers" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="teachers">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon">
+                      <svg class="svg-inline--fa fa-envelope-open fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope-open" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M512 464c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V200.724a48 48 0 0 1 18.387-37.776c24.913-19.529 45.501-35.365 164.2-121.511C199.412 29.17 232.797-.347 256 .003c23.198-.354 56.596 29.172 73.413 41.433 118.687 86.137 139.303 101.995 164.2 121.512A48 48 0 0 1 512 200.724V464zm-65.666-196.605c-2.563-3.728-7.7-4.595-11.339-1.907-22.845 16.873-55.462 40.705-105.582 77.079-16.825 12.266-50.21 41.781-73.413 41.43-23.211.344-56.559-29.143-73.413-41.43-50.114-36.37-82.734-60.204-105.582-77.079-3.639-2.688-8.776-1.821-11.339 1.907l-9.072 13.196a7.998 7.998 0 0 0 1.839 10.967c22.887 16.899 55.454 40.69 105.303 76.868 20.274 14.781 56.524 47.813 92.264 47.573 35.724.242 71.961-32.771 92.263-47.573 49.85-36.179 82.418-59.97 105.303-76.868a7.998 7.998 0 0 0 1.839-10.967l-9.071-13.196z"></path></svg><!-- <span class="fas fa-envelope-open"></span>Font
+                        Awesome fontawesome.com --></span><span class="nav-link-text ps-1">Staff</span></div>
+                </a>
+                <ul class="nav collapse" id="teachers">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/email/inbox.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">New Staff</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/email/email-detail.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">All Staff Members</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/email/email-detail.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Perfomance</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                </ul>
+                <!-- parent pages-->
+                <a class="nav-link dropdown-indicator" href="#students" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="students">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><svg class="svg-inline--fa fa-share-alt fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="share-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z"></path></svg><!-- <span class="fas fa-share-alt"></span>                        Font Awesome fontawesome.com --></span><span class="nav-link-text ps-1">Students</span></div>
+                </a>
+                <ul class="nav collapse" id="students">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/social/followers.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">New Student</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/social/feed.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">All Students</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/social/activity-log.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Performance</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/social/notifications.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Fees</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                </ul>
+                <!-- parent pages-->
+                <a class="nav-link dropdown-indicator" href="#e-learning" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="e-learning">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><svg class="svg-inline--fa fa-graduation-cap fa-w-20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="graduation-cap" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"></path></svg><!-- <span class="fas fa-graduation-cap"></span>                        Font Awesome fontawesome.com --></span><span class="nav-link-text ps-1">E learning</span><span class="badge rounded-pill ms-2 badge-subtle-success">New</span></div>
+                </a>
+                <ul class="nav collapse" id="e-learning">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-indicator" href="#course" data-bs-toggle="collapse" aria-expanded="false" aria-controls="e-learning">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Course</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                        <ul class="nav collapse" id="course">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../app/e-learning/course/course-grid.html">
+                                    <div class="d-flex align-items-center"><span class="nav-link-text ps-1">All Course</span></div>
+                                </a>
+                                <!-- more inner pages-->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../app/e-learning/course/create-a-course.html">
+                                    <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Create a Course</span></div>
+                                </a>
+                                <!-- more inner pages-->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/e-learning/student-overview.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Student overview</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/e-learning/trainer-profile.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Instructors</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                </ul>
+                <!-- parent pages-->
+                <a class="nav-link dropdown-indicator" href="#support-desk" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="support-desk">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><svg class="svg-inline--fa fa-ticket-alt fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ticket-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M128 160h320v192H128V160zm400 96c0 26.51 21.49 48 48 48v96c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48v-96c26.51 0 48-21.49 48-48s-21.49-48-48-48v-96c0-26.51 21.49-48 48-48h480c26.51 0 48 21.49 48 48v96c-26.51 0-48 21.49-48 48zm-48-104c0-13.255-10.745-24-24-24H120c-13.255 0-24 10.745-24 24v208c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24V152z"></path></svg><!-- <span class="fas fa-ticket-alt"></span>                        Font Awesome fontawesome.com --></span><span class="nav-link-text ps-1">Support desk</span></div>
+                </a>
+                <ul class="nav collapse" id="support-desk">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/support-desk/table-view.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Report Bug</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/support-desk/card-view.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Suggestions</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../app/support-desk/contacts.html">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Enquiries</span></div>
+                        </a>
+                        <!-- more inner pages-->
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="settings my-3">
+            <div class="card shadow-none">
+                <div class="card-body alert mb-0" role="alert">
+                    <div class="btn-close-falcon-container"><button class="btn btn-link btn-close-falcon p-0" aria-label="Close" data-bs-dismiss="alert"></button></div>
+                    <div class="text-center"><img src="../assets/img/icons/spot-illustrations/navbar-vertical.png" alt="" width="80">
+                        <p class="fs-11 mt-2">Loving what you see? <br>Get your copy of <a href="#!">Our App</a></p>
+                        <div class="d-grid"><a class="btn btn-sm btn-primary" href="../../../product/falcon-admin-dashboard-webapp-template/index-1.htm" target="_blank">Purchase</a></div>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
+</div>

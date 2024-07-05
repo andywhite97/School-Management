@@ -1,158 +1,95 @@
-<nav class="navbar navbar-top fixed-top navbar-expand" id="navbarDefault">
-    <div class="collapse navbar-collapse justify-content-between">
-        <div class="navbar-logo">
-            <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-            <a class="navbar-brand me-1 me-sm-3" href="">
-                <div class="d-flex align-items-center">
-                    <div class="d-flex align-items-center"><img src="../assets/img/icons/logo-2.png" alt="phoenix" width="27">
-                        <p class="logo-text ms-2 d-none d-sm-block">School Management</p>
+<nav class="navbar navbar-light navbar-glass navbar-top navbar-expand navbar-glass-shadow">
+    <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+    <a class="navbar-brand me-1 me-sm-3" href="../index.html">
+        <div class="d-flex align-items-center"><img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40"><span class="font-sans-serif text-primary">Logo</span></div>
+    </a>
+    <ul class="navbar-nav align-items-center d-none d-lg-block">
+        <li class="nav-item">
+            <div class="search-box" data-list="{&quot;valueNames&quot;:[&quot;title&quot;]}">
+                <form class="position-relative" data-bs-toggle="search" data-bs-display="static" aria-expanded="false"><input class="form-control search-input fuzzy-search" type="search" placeholder="Search..." aria-label="Search">
+                    <svg class="svg-inline--fa fa-search fa-w-16 search-box-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+                    <!-- <span class="fas fa-search search-box-icon"></span> Font Awesome fontawesome.com -->
+                </form>
+                <div class="btn-close-falcon-container position-absolute end-0 top-50 translate-middle shadow-none" data-bs-dismiss="search"><button class="btn btn-link btn-close-falcon p-0" aria-label="Close"></button></div>
+                <div class="dropdown-menu border font-base start-0 mt-2 py-0 overflow-hidden w-100">
+                    <div class="scrollbar list py-3" style="max-height: 24rem;">
+                        <hr class="text-200 dark__text-900">
+                        <h6 class="dropdown-header fw-medium text-uppercase px-x1 fs-11 pt-0 pb-2">Suggested Filter</h6>
+                        <a class="dropdown-item px-x1 py-1 fs-9" href="../app/e-commerce/customers.html">
+                            <div class="d-flex align-items-center"><span class="badge fw-medium text-decoration-none me-2 badge-subtle-warning">teachers:</span>
+                                <div class="flex-1 fs-10 title">All teachers</div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item px-x1 py-1 fs-9" href="../app/events/event-detail.html">
+                            <div class="d-flex align-items-center"><span class="badge fw-medium text-decoration-none me-2 badge-subtle-success">events:</span>
+                                <div class="flex-1 fs-10 title">Latest events in current month</div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item px-x1 py-1 fs-9" href="../app/e-commerce/product/product-grid.html">
+                            <div class="d-flex align-items-center"><span class="badge fw-medium text-decoration-none me-2 badge-subtle-info">student performance:</span>
+                                <div class="flex-1 fs-10 title">Best performing students</div>
+                            </div>
+                        </a>
+                        <hr class="text-200 dark__text-900">
+                        <h6 class="dropdown-header fw-medium text-uppercase px-x1 fs-11 pt-0 pb-2">Staff Members</h6>
+                        <a class="dropdown-item px-x1 py-2" href="../pages/user/profile.html">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar avatar-l status-online me-2">
+                                    <img class="rounded-circle" src="../assets/img/team/1.jpg" alt="">
+                                </div>
+                                <div class="flex-1">
+                                    <h6 class="mb-0 title">Someone Here</h6>
+                                    <p class="fs-11 mb-0 d-flex">Math Teacher</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item px-x1 py-2" href="../pages/user/profile.html">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar avatar-l me-2">
+                                    <img class="rounded-circle" src="../assets/img/team/2.jpg" alt="">
+                                </div>
+                                <div class="flex-1">
+                                    <h6 class="mb-0 title">Another Here</h6>
+                                    <p class="fs-11 mb-0 d-flex">English Teacher</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item px-x1 py-2" href="../pages/user/profile.html">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar avatar-l me-2">
+                                    <img class="rounded-circle" src="../assets/img/team/3.jpg" alt="">
+                                </div>
+                                <div class="flex-1">
+                                    <h6 class="mb-0 title">Lastly Here</h6>
+                                    <p class="fs-11 mb-0 d-flex">Computer Teacher</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
+                    <div class="text-center mt-n3">
+                        <p class="fallback fw-bold fs-8 d-none">No Result Found.</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="navbar-nav navbar-nav-icons ms-auto flex-row align-items-center">
+
+        <li class="nav-item dropdown">
+            <a class="nav-link pe-0 ps-2" id="navbarDropdownUser" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="avatar avatar-xl">
+                    <img class="rounded-circle" src="../assets/img/team/3-thumb.png" alt="">
                 </div>
             </a>
-        </div>
-        <div class="search-box navbar-top-search-box d-none d-lg-block" data-list="{&quot;valueNames&quot;:[&quot;title&quot;]}" style="width:25rem;">
-            <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input fuzzy-search rounded-pill form-control-sm" type="search" placeholder="Search..." aria-label="Search">
-                <svg class="svg-inline--fa fa-magnifying-glass search-box-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"></path></svg>
-                <!-- <span class="fas fa-search search-box-icon"></span> Font Awesome fontawesome.com -->
-            </form>
-        </div>
-        <ul class="navbar-nav navbar-nav-icons flex-row">
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#" style="min-width: 2.25rem" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell" style="height:20px;width:20px;"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></a>
-                <div class="dropdown-menu dropdown-menu-end notification-dropdown-menu py-0 shadow border navbar-dropdown-caret" id="navbarDropdownNotfication" aria-labelledby="navbarDropdownNotfication">
-                    <div class="card position-relative border-0">
-                        <div class="card-header p-2">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="text-body-emphasis mb-0">Notifications</h5><button class="btn btn-link p-0 fs-9 fw-normal" type="button">Mark all as read</button>
-                            </div>
-                        </div>
-                        <div class="card-body p-0">
-                            <div class="scrollbar-overlay" style="height: 27rem;" data-simplebar="init">
-                                <div class="simplebar-wrapper" style="margin: 0px;">
-                                    <div class="simplebar-height-auto-observer-wrapper">
-                                        <div class="simplebar-height-auto-observer"></div>
-                                    </div>
-                                    <div class="simplebar-mask">
-                                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
-                                            <div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden;">
-                                                <div class="simplebar-content" style="padding: 0px;">
-                                                    <div class="px-2 px-sm-3 py-3 notification-card position-relative read border-bottom">
-                                                        <div class="d-flex align-items-center justify-content-between position-relative">
-                                                            <div class="d-flex">
-                                                                <div class="avatar avatar-m status-online me-3"><img class="rounded-circle" src="../assets/img/team/40x40/30-1.webp" alt=""></div>
-                                                                <div class="flex-1 me-sm-3">
-                                                                    <h4 class="fs-9 text-body-emphasis">Principal</h4>
-                                                                    <p class="fs-9 text-body-highlight mb-2 mb-sm-3 fw-normal"><span class="me-1 fs-10">💬</span>Meeting At Staff Room after Lunch.<span class="ms-2 text-body-quaternary text-opacity-75 fw-bold fs-10">10m</span></p>
-                                                                    <p class="text-body-secondary fs-9 mb-0"><svg class="svg-inline--fa fa-clock me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                                                            data-fa-i2svg=""><path fill="currentColor" d="M256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512zM232 256C232 264 236 271.5 242.7 275.1L338.7 339.1C349.7 347.3 364.6 344.3 371.1 333.3C379.3 322.3 376.3 307.4 365.3 300L280 243.2V120C280 106.7 269.3 96 255.1 96C242.7 96 231.1 106.7 231.1 120L232 256z"></path></svg>
-                                                                        <!-- <span class="me-1 fas fa-clock"></span> Font Awesome fontawesome.com --><span class="fw-bold">10:41 AM </span>August 7,2021</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="d-none d-sm-block"><button class="btn fs-10 btn-sm dropdown-toggle dropdown-caret-none transition-none notification-dropdown-toggle" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true"
-                                                                    aria-expanded="false" data-bs-reference="parent"><svg class="svg-inline--fa fa-ellipsis fs-10 text-body" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z"></path></svg><!-- <span class="fas fa-ellipsis-h fs-10 text-body"></span> Font Awesome fontawesome.com --></button>
-                                                                <div class="dropdown-menu dropdown-menu-end py-2"><a class="dropdown-item" href="#!">Mark as unread</a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="px-2 px-sm-3 py-3 notification-card position-relative unread border-bottom">
-                                                        <div class="d-flex align-items-center justify-content-between position-relative">
-                                                            <div class="d-flex">
-                                                                <div class="avatar avatar-m status-online me-3">
-                                                                    <div class="avatar-name rounded-circle"><span>D</span></div>
-                                                                </div>
-                                                                <div class="flex-1 me-sm-3">
-                                                                    <h4 class="fs-9 text-body-emphasis">Deputy Principal</h4>
-                                                                    <p class="fs-9 text-body-highlight mb-2 mb-sm-3 fw-normal"><span class="me-1 fs-10">📅</span>Created an event.<span class="ms-2 text-body-quaternary text-opacity-75 fw-bold fs-10">20m</span></p>
-                                                                    <p class="text-body-secondary fs-9 mb-0"><svg class="svg-inline--fa fa-clock me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                                                            data-fa-i2svg=""><path fill="currentColor" d="M256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512zM232 256C232 264 236 271.5 242.7 275.1L338.7 339.1C349.7 347.3 364.6 344.3 371.1 333.3C379.3 322.3 376.3 307.4 365.3 300L280 243.2V120C280 106.7 269.3 96 255.1 96C242.7 96 231.1 106.7 231.1 120L232 256z"></path></svg>
-                                                                        <!-- <span class="me-1 fas fa-clock"></span> Font Awesome fontawesome.com --><span class="fw-bold">10:20 AM </span>August 7,2021</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="d-none d-sm-block"><button class="btn fs-10 btn-sm dropdown-toggle dropdown-caret-none transition-none notification-dropdown-toggle" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true"
-                                                                    aria-expanded="false" data-bs-reference="parent"><svg class="svg-inline--fa fa-ellipsis fs-10 text-body" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z"></path></svg><!-- <span class="fas fa-ellipsis-h fs-10 text-body"></span> Font Awesome fontawesome.com --></button>
-                                                                <div class="dropdown-menu dropdown-menu-end py-2"><a class="dropdown-item" href="#!">Mark as unread</a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
-                                </div>
-                                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-                                    <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
-                                </div>
-                                <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
-                                    <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer p-0 border-top border-translucent border-0">
-                            <div class="my-2 text-center fw-bold fs-10 text-body-tertiary text-opactity-85"><a class="fw-bolder" href="">Notification history</a></div>
-                        </div>
-                    </div>
+            <div class="dropdown-menu dropdown-caret dropdown-caret dropdown-menu-end py-0" aria-labelledby="navbarDropdownUser">
+                <div class="bg-white dark__bg-1000 rounded-2 py-2">
+                    <a class="dropdown-item" href="#!">Set status</a>
+                    <a class="dropdown-item" href="../pages/user/profile.html">Profile &amp; account</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../pages/user/settings.html">Settings</a>
+                    <a class="dropdown-item" [routerLink]="['/logout']">Logout</a>
                 </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link lh-1 pe-0" id="navbarDropdownUser" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
-                    <div class="avatar avatar-l ">
-                        <img class="rounded-circle " src="../assets/img/team/40x40/57-1.webp" alt="">
-                    </div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border" aria-labelledby="navbarDropdownUser">
-                    <div class="card position-relative border-0">
-                        <div class="card-body p-0">
-                            <div class="text-center pt-4 pb-3">
-                                <div class="avatar avatar-xl ">
-                                    <img class="rounded-circle " src="../assets/img/team/72x72/57-1.webp" alt="">
-                                </div>
-                                <h6 class="mt-2 text-body-emphasis">Jerry Seinfield</h6>
-                            </div>
-                        </div>
-                        <div class="overflow-auto scrollbar" style="height: 10rem;">
-                            <ul class="nav d-flex flex-column mb-2 pb-1">
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="#!"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user me-2 text-body"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Profile</span></a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link px-3" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart me-2 text-body"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>Dashboard</a></li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="#!"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock me-2 text-body"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Posts
-                                        &amp; Activity</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="#!"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings me-2 text-body"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>Settings
-                                        &amp; Privacy </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="#!"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle me-2 text-body"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Help
-                                        Center
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="#!"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe me-2 text-body"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Language</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-footer p-0 border-top border-translucent">
-                            <ul class="nav d-flex flex-column my-3">
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="#!"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus me-2 text-body"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>Add
-                                        another account</a>
-                                </li>
-                            </ul>
-                            <hr>
-                            <div class="px-3">
-                                <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="#!"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out me-2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>Sign
-                                    out
-                                </a>
-                            </div>
-                            <div class="my-2 text-center fw-bold fs-10 text-body-quaternary"><a class="text-body-quaternary me-1" href="#!">Privacy policy</a>•<a class="text-body-quaternary mx-1" href="#!">Terms</a>•<a class="text-body-quaternary ms-1" href="#!">Cookies</a></div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
+            </div>
+        </li>
+    </ul>
 </nav>

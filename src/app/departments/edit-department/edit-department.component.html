@@ -1,0 +1,89 @@
+<div class="row g-lg-3 font-sans-serif">
+    <div class="col-12">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5 class="mb-0">Department Information</h5>
+            </div>
+            <div class="card-body bg-body-tertiary">
+                <form class="row gx-2">
+                    <div class="col-12 col-lg-6 mb-3"><label class="form-label" for="department-name">Name<span class="text-danger">*</span></label><input class="form-control" id="department-name" type="text" placeholder="department Title" required="required"></div>
+                    <div class="col-sm-6 mb-3"><label class="form-label" for="department-head">Head Of Department<span class="text-danger">*</span></label><select class="form-select" id="department-head" name="department-head">
+            <option>Select a teacher</option>
+            <option>Teacher 01</option>
+            <option>Teacher 02</option>
+            <option>Teacher 03</option>
+          </select></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mb-3 mb-lg-0">
+            <div class="card-header bg-body-tertiary">
+                <div class="d-flex flex-between-center mb-2">
+                    <h5 class="mb-0">Department Subjects</h5>
+                    <button class="btn btn-link btn-sm fw-medium p-0" type="button">Add New</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive scrollbar">
+                    <table class="table table-sm mb-0 fs-10 table-view-subject">
+                        <thead class="bg-body-tertiary">
+                            <tr>
+                                <th></th>
+                                <th class="text-800 sort align-middle ps-2" data-sort="client">Subject</th>
+                                <th class="text-800 sort align-middle" data-sort="subject" style="min-width:15.625rem"></th>
+                                <th class="text-800 sort align-middle" data-sort="status"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="list" id="table-department-body">
+                            <tr>
+                                <td class="align-middle fs-9 py-3">
+                                    <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="table-view-subject-0" data-bulk-select-row="data-bulk-select-row"></div>
+                                </td>
+                                <td class="align-middle client white-space-nowrap pe-3 pe-xxl-4 ps-2">
+                                    <div class="d-flex align-items-center gap-2 position-relative">
+                                        <h6 class="mb-0"><a class="stretched-link text-900" href="contact-details.html">Maths</a></h6>
+                                    </div>
+                                </td>
+                                <td class="align-middle subject py-2 pe-4"></td>
+                                <td class="align-middle status fs-9 pe-4"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle fs-9 py-3">
+                                    <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="table-view-subject-1" data-bulk-select-row="data-bulk-select-row"></div>
+                                </td>
+                                <td class="align-middle client white-space-nowrap pe-3 pe-xxl-4 ps-2">
+                                    <div class="d-flex align-items-center gap-2 position-relative">
+                                        <h6 class="mb-0"><a class="stretched-link text-900" href="contact-details.html">Physics</a></h6>
+                                    </div>
+                                </td>
+                                <td class="align-middle subject py-2 pe-4"></td>
+                                <td class="align-middle status fs-9 pe-4"></td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle fs-9 py-3">
+                                    <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="table-view-subject-2" data-bulk-select-row="data-bulk-select-row"></div>
+                                </td>
+                                <td class="align-middle client white-space-nowrap pe-3 pe-xxl-4 ps-2">
+                                    <div class="d-flex align-items-center gap-2 position-relative">
+                                        <h6 class="mb-0"><a class="stretched-link text-900" href="contact-details.html">Biology</a></h6>
+                                    </div>
+                                </td>
+                                <td class="align-middle subject py-2 pe-4"></td>
+                                <td class="align-middle status fs-9 pe-4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center d-none" id="subject-table-fallback">
+                        <p class="fw-bold fs-8 mt-3">No subject found</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer py-2" id="course-publish-btn">
+                <div class="row d-flex flex-row-reverse g-0">
+                    <div class="col-auto"><button class="btn btn-primary btn-md px-xxl-5 px-4 fw-medium" type="submit">Publish</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
